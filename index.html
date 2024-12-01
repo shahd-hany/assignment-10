@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Bookmark</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+    <div class="home col-6 p-5 d-flex flex-column gap-4">
+        <div class="head"><div class="title"><h1>bookmarker</h1></div></div>
+        <h2 class="mt-4">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+        <div class="inputs d-flex flex-column gap-5">
+            <form>
+    <div><label for="bName" class="fw-bolder"><i class="fa-solid fa-book-bookmark pe-1"></i>Site Name</label>
+    <input type="text" class="form-control mt-1" id="bName" oninput="nameValidation()"></div>
+    <div class="alert-danger alert mt-3 p-3 d-none" id="alertName">Duplicate Name!</div>
+    <div> <label for="bUrl" class="fw-bolder mt-3"><i class="fa-solid fa-link pe-1"></i> Site URL</label>
+    <input type="url" class="form-control mt-1" id="bUrl" oninput="urlValidation()"></div>
+    <div class="alert-danger alert mt-3 p-3 d-none" id="alert">URL should follow the format scheme://domain:port/path?query#fragment, with valid characters in each part, no spaces, and proper encoding for special characters.</div>
+    <div class="w-50 mt-3 p-2">
+    <button class="btn btn-warning d-block m-3 ms-0" type="submit" onclick=" addUrl(elist)">Add to E-commerce</button>
+    <button class="btn btn-warning d-block m-3 ms-0" type="submit" onclick="addUrl(infolist)">Add to Informational</button>
+    <button class="btn btn-warning d-block m-3 ms-0" type="submit" onclick="addUrl(sociallist)">Add to Social Networking</button>
+    <button class="btn btn-warning d-block m-3 ms-0" type="submit" onclick="addUrl(olist)">Other</button></div>
+   </form>
+   </div>
+     </div>
+     <div class="book col-6 border-success-subtle p-5 mt-5">
+        <div class="container d-flex flex-column gap-5">
+            <div class="row ">
+                <div class="col-6 d-flex flex-column gap-2">
+                    <i class="fa-solid fa-cart-shopping"></i><h4> E-commerce Websites</h4><div class="category border border-secondary-subtle p-5  rounded-2 bg-light-subtle" id="ebox"></div></div>
+                    <div class="col-6 d-flex flex-column gap-2"> <i class="fa-solid fa-chalkboard"></i><h4>Informational Websites</h4>
+                    <div class="category border border-secondary-subtle p-5 rounded-2 bg-light-subtle" id="infobox"></div></div>
+            </div>
+            <div class="row">
+                <div class="col-6 d-flex flex-column gap-2">
+                    <i class="fa-solid fa-share-from-square"></i><h4>Social Networking Websites</h4>
+                    <div class="category border border-secondary-subtle p-5 rounded-2 bg-light-subtle" id="sobox"></div></div>
+                <div class="col-6 d-flex flex-column gap-2">
+                    <i class="fa-solid fa-paperclip"></i><h4>OTHERS</h4>
+                     <div class="category border border-secondary-subtle p-5 rounded-2 mt-4 bg-light-subtle" id="obox"></div></div>
+            </div>
+    </div>
+     </div>
+    </div>
+   </div>
+    <script src="./style/index.js"></script>
+</body>
+</html>

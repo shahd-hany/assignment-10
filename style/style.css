@@ -1,0 +1,34 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F7ECDE;
+}
+h1{
+    font-family: "Pacifico", cursive;
+    transform: translatey(-25px);
+}
+
+.head{
+ width:35%;
+ height:7px;
+ top:50%;
+ left:0;
+ background-color: #3FA55B;
+}
+.title:hover head{
+ transform: translatex(10px);
+ background-color: #b5ac49;
+}
+h4{
+    font-family: "Righteous", sans-serif;
+}
+.home h2{
+    font-family: "Righteous", cursive;
+    font-size: 25px;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    background-clip: text;
+    -webkit-text-fill-color: transparent
+}
